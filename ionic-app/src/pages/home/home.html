@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="primary" hideBackButton>
+        <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Inicio</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <h2>Bienvenido {{userDetails.name}}</h2>
+    <h3>{{userDetails.email}}</h3>
+
+    <ion-list>
+
+        <ion-item *ngFor="let image of images">
+            <div class="img-content" item-left>
+                <img src="http://localhost:3000/{{image.picture.medium.url}}" class="img-thump">
+            </div>
+            <h2 class="description-image">{{ image.description }}</h2>
+            <p>{{ image.created_at | date:'M/d/yyyy HH:mm:ss' }}</p>
+            <button ion-button clear item-end (click)="goImage(image.picture.medium.url, image.description, image.created_at );">
+        Ver +
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

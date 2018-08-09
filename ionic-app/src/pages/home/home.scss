@@ -1,0 +1,24 @@
+page-home {
+    ion-navbar[hidebackbutton] button[menutoggle] {
+        display: block !important;
+    }
+}
+
+.img-thump {
+    max-width: 200%;
+    border: 0;
+    margin-left: -38px;
+}
+
+.img-content {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.description-image {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+}
