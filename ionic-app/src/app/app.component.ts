@@ -6,6 +6,9 @@ import { HomePage } from '../pages/home/home';
 import { PerfilPage } from '../pages/perfil/perfil'
 import { ContactenosPage } from '../pages/contactenos/contactenos';
 import { WelcomePage} from '../pages/welcome/welcome';
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+import { ChapineroPage } from '../pages/chapinero/chapinero';
+import { NoticiasPage } from '../pages/noticias/noticias';
 
 
 @Component({
@@ -18,7 +21,6 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
-  
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
@@ -29,13 +31,16 @@ export class MyApp {
 
       { titulo: 'Inicio', component: HomePage, icon: 'home' },
       { titulo: 'Perfil', component: PerfilPage , icon: 'person' },
-      { titulo: 'Contáctenos', component: ContactenosPage , icon: 'mail' }
+      { titulo: 'Contáctenos', component: ContactenosPage , icon: 'mail' },
+      { titulo: 'Configuración', component: ConfiguracionPage, icon: 'settings' },
+      { titulo: 'Chapinero', component: ChapineroPage, icon: 'map' },
+      { titulo: 'Noticias', component: NoticiasPage, icon: 'paper' }
       ]
-      this.rootPage = WelcomePage;
+      this.rootPage = PerfilPage;
   }
   goToPage(page){
     this.nav.setRoot(page);
-    
-    }
+
+  }
 }
 

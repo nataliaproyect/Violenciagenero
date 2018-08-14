@@ -16,6 +16,10 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 
+import { ConfiguracionPage } from '../pages/configuracion/configuracion';
+import { ChapineroPage } from '../pages/chapinero/chapinero';
+import { NoticiasPage } from '../pages/noticias/noticias';
+
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { HttpModule } from '@angular/http';
@@ -33,9 +37,9 @@ import { IonicStorageModule } from '@ionic/storage';
     WelcomePage,
     SignUpPage,
     ImageInfoPage,
-  
-    
-      
+    ConfiguracionPage,
+    ChapineroPage,
+    NoticiasPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,9 @@ import { IonicStorageModule } from '@ionic/storage';
     WelcomePage,
     ImageInfoPage,
     SignUpPage,
-  
+    ConfiguracionPage,
+    ChapineroPage,
+    NoticiasPage
   ],
   providers: [
     StatusBar,
